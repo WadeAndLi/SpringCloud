@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: item-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/fly?serverTimezone=UTC
+    username: root
+    password: 123456
+  main:
+    allow-bean-definition-overriding: true
+#mybatis:
+#  type-aliases-package: com.wade.po
+server:
+  port: 8081
+eureka:
+  client:
+    service-url:
+      defaultZone: http://0.0.0.0:10086/eureka
+  instance:
+    ip-address: 0.0.0.0
+    prefer-ip-address: true
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

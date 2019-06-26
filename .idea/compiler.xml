@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="flycommon" />
+        <module name="flyiteminterface" />
+        <module name="flyregistry" />
+        <module name="flyupload" />
+        <module name="gateway" />
+        <module name="itemflyinterface" />
+        <module name="itemflyservice" />
+        <module name="lyGateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="flycommon" target="1.8" />
+      <module name="flygateway" target="1.8" />
+      <module name="flyitem" target="1.8" />
+      <module name="flyiteminterface" target="1.8" />
+      <module name="flyitemservice" target="1.8" />
+      <module name="flyproject" target="1.8" />
+      <module name="flyregistry" target="1.8" />
+      <module name="flyupload" target="1.8" />
+      <module name="gateway" target="1.8" />
+      <module name="itemflyinterface" target="1.8" />
+      <module name="itemflyserver" target="1.8" />
+      <module name="itemflyservice" target="1.8" />
+      <module name="lyGateway" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

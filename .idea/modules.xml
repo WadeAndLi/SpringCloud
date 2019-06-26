@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/flycommon/flycommon.iml" filepath="$PROJECT_DIR$/flycommon/flycommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flyproject.iml" filepath="$PROJECT_DIR$/flyproject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flyregistry/flyregistry.iml" filepath="$PROJECT_DIR$/flyregistry/flyregistry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flyupload/flyupload.iml" filepath="$PROJECT_DIR$/flyupload/flyupload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itemflyserver/itemflyinterface/itemflyinterface.iml" filepath="$PROJECT_DIR$/itemflyserver/itemflyinterface/itemflyinterface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itemflyserver/itemflyserver.iml" filepath="$PROJECT_DIR$/itemflyserver/itemflyserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itemflyserver/itemflyservice/itemflyservice.iml" filepath="$PROJECT_DIR$/itemflyserver/itemflyservice/itemflyservice.iml" />
+    </modules>
+  </component>
+</project>

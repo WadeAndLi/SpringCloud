@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: upload-service
+  servlet:
+    multipart:
+      max-file-size: 5MB
+#mybatis:
+#  type-aliases-package: com.wade.po
+server:
+  port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: http://0.0.0.0:10086/eureka
+  instance:
+    ip-address: 0.0.0.0
+    prefer-ip-address: true
+fdfs:
+  so-timeout: 2500
+  connect-timeout: 600
+  thumb-image:
+    width: 60
+    height: 60
+  tracker-list:
+    - 172.19.168.25:22122
+fly:
+  upload:
+    base-url: "http://image.fly.com/"
+    allow-types:
+      - image/jpeg
+      - image/png
+      - image/bmg
