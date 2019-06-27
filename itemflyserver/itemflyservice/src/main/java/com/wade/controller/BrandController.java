@@ -5,10 +5,9 @@ import com.wade.po.BrandPO;
 import com.wade.service.BrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("brand")
@@ -26,5 +25,10 @@ public class BrandController {
             @RequestParam(value = "desc", defaultValue = "false")boolean desc
     ) {
         return ResponseEntity.ok(brandService.queryBrand(page, key, rows, sortBy, desc));
+    }
+
+    @GetMapping("cid/{cid}")
+    public ResponseEntity<List<BrandPO>> getBrandById(@PathVariable("cid")Long cid) {
+            return ResponseEntity.ok(brandService.queryBrandById(cid));
     }
 }

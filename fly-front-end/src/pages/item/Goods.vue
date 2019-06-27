@@ -39,8 +39,8 @@
       <template slot="items" slot-scope="props">
         <td class="text-xs-center">{{ props.item.id }}</td>
         <td class="text-xs-center">{{ props.item.title }}</td>
-        <td class="text-xs-center">{{ props.item.categoryName}}</td>
-        <td class="text-xs-center">{{ props.item.brandName }}</td>
+        <td class="text-xs-center">{{ props.item.cname}}</td>
+        <td class="text-xs-center">{{ props.item.bname }}</td>
         <td class="justify-center layout px-0">
           <v-btn icon small @click="editItem(props.item)">
             <i class="el-icon-edit"/>
@@ -168,7 +168,7 @@
       },
       editItem(item) {
         this.selectedGoods = item;
-        const names = item.categoryName.split("/");
+        const names = item.cname.split("/");
         this.selectedGoods.categories = [
           {id: item.cid1, name: names[0]},
           {id: item.cid2, name: names[1]},
@@ -205,7 +205,7 @@
         let params = {
           page: this.pagination.page,
           rows: this.pagination.rowsPerPage,
-          saleable: !this.search.saleable
+          saleable: !!this.search.saleable
         }
         !!this.search.key && (params.key = this.search.key)
         this.$http.get("/item/spu/page", {params: params}).then(resp => {
