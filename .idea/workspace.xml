@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a9e69cc-56e6-48fb-8ab1-b16a43619c7b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/SpecificationPO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/SpecificationController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/SpecificationMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/SpecificationService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/SpuDetailPO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/SpuPO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/GoodsController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/SpuDetailMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/SpuMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/GoodsService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fly-front-end/src/pages/item/Goods.vue" afterPath="$PROJECT_DIR$/fly-front-end/src/pages/item/Goods.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flycommon/src/main/java/com/wade/common/ExceptionEnum.java" afterPath="$PROJECT_DIR$/flycommon/src/main/java/com/wade/common/ExceptionEnum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/itemflyserver/itemflyinterface/itemflyinterface.iml" afterPath="$PROJECT_DIR$/itemflyserver/itemflyinterface/itemflyinterface.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/itemflyserver/itemflyinterface/pom.xml" afterPath="$PROJECT_DIR$/itemflyserver/itemflyinterface/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/BrandPO.java" afterPath="$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/BrandPO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/itemflyserver/itemflyservice/itemflyservice.iml" afterPath="$PROJECT_DIR$/itemflyserver/itemflyservice/itemflyservice.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/CategoryMapper.java" afterPath="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/CategoryMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/BrandService.java" afterPath="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/BrandService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/CategoryService.java" afterPath="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/CategoryService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,14 +69,14 @@
         <item name="fly@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="fly" type="e3449647:DbNodeDescriptor" />
         <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
-        <item name="tb_brand" type="e3449647:DbNodeDescriptor" />
+        <item name="tb_spu" type="e3449647:DbNodeDescriptor" />
       </path>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="fly@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="fly" type="e3449647:DbNodeDescriptor" />
         <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
-        <item name="tb_specification" type="e3449647:DbNodeDescriptor" />
+        <item name="tb_spu_detail" type="e3449647:DbNodeDescriptor" />
       </path>
     </expand>
     <select />
@@ -75,21 +86,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flyupload/src/main/resources/application.yml">
+      <file leaf-file-name="GoodsService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/GoodsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UploadService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flyupload/src/main/java/com/wade/service/UploadService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="-259">
+              <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,32 +98,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExceptionEnum.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flycommon/src/main/java/com/wade/common/ExceptionEnum.java">
+      <file leaf-file-name="ItemController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/ItemController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+            <state relative-caret-position="162">
+              <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpecificationPO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/SpecificationPO.java">
+      <file leaf-file-name="GoodsController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/GoodsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state relative-caret-position="146">
+              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#327#328#0" expanded="true" />
-                <element signature="e#360#361#0" expanded="true" />
-                <element signature="e#410#411#0" expanded="true" />
-                <element signature="e#454#455#0" expanded="true" />
-                <element signature="e#495#496#0" expanded="true" />
-                <element signature="e#532#533#0" expanded="true" />
-                <element signature="e#592#593#0" expanded="true" />
-                <element signature="e#644#645#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BrandController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/BrandController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="27" column="50" lean-forward="true" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -130,18 +133,33 @@
       <file leaf-file-name="BrandPO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/BrandPO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="-162">
+              <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+              <folding>
+                <element signature="e#468#469#0" expanded="true" />
+                <element signature="e#493#494#0" expanded="true" />
+                <element signature="e#527#528#0" expanded="true" />
+                <element signature="e#555#556#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoryService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/CategoryService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpecificationMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/SpecificationMapper.java">
+      <file leaf-file-name="SpuMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/SpuMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="5" column="49" lean-forward="false" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -149,43 +167,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpecificationService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/SpecificationService.java">
+      <file leaf-file-name="CategoryMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/CategoryMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+            <state relative-caret-position="108">
+              <caret line="6" column="85" lean-forward="false" selection-start-line="6" selection-start-column="85" selection-end-line="6" selection-end-column="85" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpecificationController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/SpecificationController.java">
+      <file leaf-file-name="BrandService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/BrandService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GateWay.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/wade/GateWay.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="114">
+              <caret line="24" column="31" lean-forward="false" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LyItemApplication.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/LyItemApplication.java">
+      <file leaf-file-name="CategoryController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/CategoryController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="324">
+              <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -220,13 +226,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/flycommon/src/main/java/com/wade/common/CookieUtils.java" />
-        <option value="$PROJECT_DIR$/flycommon/src/main/java/com/wade/common/IdWorker.java" />
-        <option value="$PROJECT_DIR$/flycommon/src/main/java/com/wade/common/NumberUtils.java" />
-        <option value="$PROJECT_DIR$/flycommon/src/main/java/com/wade/common/main.java" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="/JSON Fragment (JsonUtils.java:3154).json" />
-        <option value="$PROJECT_DIR$/flycommon/src/main/java/com/wade/common/JsonUtils.java" />
         <option value="$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/Item.java" />
         <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/ItemService.java" />
         <option value="$PROJECT_DIR$/flycommon/pom.xml" />
@@ -235,22 +234,17 @@
         <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/ItemController.java" />
         <option value="$PROJECT_DIR$/flycommon/src/main/java/com/wade/common/ExceptionPO.java" />
         <option value="$PROJECT_DIR$/flycommon/src/main/java/com/wade/common/CommonExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/itemflyserver/itemflyinterface/pom.xml" />
         <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/CategoryMapper.java" />
-        <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/CategoryMapper.java" />
         <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/CategoryController.java" />
         <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/LyItemApplication.java" />
         <option value="$PROJECT_DIR$/flyregistry/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/gateway/src/main/java/com/wade/config/GlobalCorsConfig.java" />
-        <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/CategoryService.java" />
         <option value="$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/Category.java" />
         <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/BrandMapper.java" />
         <option value="$PROJECT_DIR$/flycommon/src/main/java/com/wade/common/PageResult.java" />
         <option value="$MAVEN_REPOSITORY$/tk/mybatis/mapper-core/1.0.4/mapper-core-1.0.4.jar!/tk/mybatis/mapper/entity/Example.class" />
-        <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/BrandService.java" />
         <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/BrandController.java" />
         <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/flycommon/src/main/java/com/wade/common/ExceptionEnum.java" />
         <option value="$PROJECT_DIR$/gateway/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/flyupload/src/main/java/com/wade/controller/UploadController.java" />
         <option value="$PROJECT_DIR$/flyupload/pom.xml" />
@@ -267,10 +261,22 @@
         <option value="$PROJECT_DIR$/flyupload/src/main/java/com/wade/service/UploadService.java" />
         <option value="$PROJECT_DIR$/flyupload/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/SpecificationPO.java" />
-        <option value="$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/BrandPO.java" />
         <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/SpecificationMapper.java" />
         <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/SpecificationService.java" />
         <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/SpecificationController.java" />
+        <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/SpuMapper.java" />
+        <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/SpuService.java" />
+        <option value="$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/SpuDetailPO.java" />
+        <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/SpuDetailMapper.java" />
+        <option value="$PROJECT_DIR$/itemflyserver/itemflyinterface/pom.xml" />
+        <option value="$PROJECT_DIR$/flycommon/src/main/java/com/wade/common/ExceptionEnum.java" />
+        <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/CategoryMapper.java" />
+        <option value="$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/SpuPO.java" />
+        <option value="$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/BrandPO.java" />
+        <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/GoodsService.java" />
+        <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/BrandService.java" />
+        <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/CategoryService.java" />
+        <option value="$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/GoodsController.java" />
       </list>
     </option>
   </component>
@@ -292,6 +298,9 @@
       <expand />
       <select />
     </treeState>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/fly-front-end/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
@@ -315,10 +324,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -329,25 +336,25 @@
             <path>
               <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="flyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="flycommon" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="flyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="flycommon" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="flyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="flycommon" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="flyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="flycommon" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -355,7 +362,92 @@
             <path>
               <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="flyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="flycommon" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyserver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyserver" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyinterface" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyserver" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyinterface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyserver" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyinterface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyserver" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyinterface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyserver" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyinterface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="po" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyserver" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyserver" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyserver" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyserver" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyserver" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyservice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -365,36 +457,12 @@
               <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="flyproject" type="462c0819:PsiDirectoryNode" />
               <item name="itemflyserver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="itemflyserver" type="462c0819:PsiDirectoryNode" />
-              <item name="itemflyservice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="itemflyserver" type="462c0819:PsiDirectoryNode" />
-              <item name="itemflyservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="itemflyserver" type="462c0819:PsiDirectoryNode" />
-              <item name="itemflyservice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="itemflyserver" type="462c0819:PsiDirectoryNode" />
               <item name="itemflyservice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wade" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
@@ -405,11 +473,25 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="wade" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flyproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flyproject" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyserver" type="462c0819:PsiDirectoryNode" />
+              <item name="itemflyservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wade" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -446,7 +528,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.LyItemApplication">
+  <component name="RunManager" selected="Spring Boot.FlyUpLoad">
     <configuration name="FlyUpLoad" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wade.FlyUpLoad" />
@@ -689,6 +771,7 @@
       <workItem from="1561268728270" duration="20647000" />
       <workItem from="1561385581369" duration="9163000" />
       <workItem from="1561562963954" duration="749000" />
+      <workItem from="1561633029268" duration="8260000" />
     </task>
     <servers />
   </component>
@@ -725,7 +808,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46221000" />
+    <option name="totallyTimeSpent" value="54481000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -738,31 +821,32 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937366" sideWeight="0.49785408" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937366" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32864866" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937366" sideWeight="0.49785408" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29697624" sideWeight="0.50429183" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16738197" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30486485" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20324324" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4345946" sideWeight="0.49785408" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29697624" sideWeight="0.49570817" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29621622" sideWeight="0.49570817" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30311158" sideWeight="0.49436393" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3251073" sideWeight="0.49436393" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19688842" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22156653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37149027" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19903433" sideWeight="0.5056361" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37149027" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -818,12 +902,6 @@
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/BrandService.java</url>
-          <line>26</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="7" />
     </breakpoint-manager>
@@ -834,71 +912,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyinterface/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flycommon/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itemflyserver/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flyregistry/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/wade/config/GlobalCorsConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper-base/1.0.4/mapper-base-1.0.4.jar!/tk/mybatis/mapper/common/base/select/SelectMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper-base/1.0.4/mapper-base-1.0.4.jar!/tk/mybatis/mapper/common/rowbounds/SelectByExampleRowBoundsMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.22/lombok-1.16.22-sources.jar!/lombok/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="45" column="18" lean-forward="false" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.22/lombok-1.16.22-sources.jar!/lombok/Getter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -906,31 +919,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/ItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/845dd66c/17a709df-aa95-4d84-954c-f64b9c8bf057/fly.tb_brand">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/BrandMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/CategoryMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -952,48 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22059">
           <caret line="896" column="32" lean-forward="false" selection-start-line="896" selection-start-column="32" selection-end-line="896" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/CategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="22" column="64" lean-forward="false" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/CategoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/BrandService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="30" column="9" lean-forward="false" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/ItemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/BrandController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="21" column="70" lean-forward="false" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1037,14 +987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="999">
           <caret line="60" column="18" lean-forward="false" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flycommon/src/main/java/com/wade/common/ExceptionEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1150,7 +1092,7 @@
         <state relative-caret-position="81">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1160,30 +1102,22 @@
         <state relative-caret-position="243">
           <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#327#328#0" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#495#496#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#592#593#0" expanded="true" />
-            <element signature="e#644#645#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#327#328#0" expanded="false" />
+            <element signature="e#360#361#0" expanded="false" />
+            <element signature="e#410#411#0" expanded="false" />
+            <element signature="e#454#455#0" expanded="false" />
+            <element signature="e#495#496#0" expanded="false" />
+            <element signature="e#532#533#0" expanded="false" />
+            <element signature="e#592#593#0" expanded="false" />
+            <element signature="e#644#645#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/BrandPO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/SpecificationMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
+        <state relative-caret-position="162">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1193,7 +1127,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/SpecificationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
+        <state relative-caret-position="216">
           <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
           <folding />
         </state>
@@ -1201,7 +1135,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/SpecificationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
+        <state relative-caret-position="243">
           <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1222,6 +1156,250 @@
         <state relative-caret-position="270">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/SpuDetailMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/SpuDetailPO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding>
+            <element signature="e#303#304#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#531#532#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#655#656#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+            <element signature="e#767#768#0" expanded="true" />
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#939#940#0" expanded="true" />
+            <element signature="e#977#978#0" expanded="true" />
+            <element signature="e#1011#1012#0" expanded="true" />
+            <element signature="e#1065#1066#0" expanded="true" />
+            <element signature="e#1111#1112#0" expanded="true" />
+            <element signature="e#1150#1151#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="e#1241#1242#0" expanded="true" />
+            <element signature="e#1289#1290#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyinterface/itemflyinterface.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/itemflyservice.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyinterface/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/ItemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flycommon/src/main/java/com/wade/common/ExceptionEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/BrandMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/SpuPO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#751#752#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
+            <element signature="e#965#966#0" expanded="true" />
+            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#1031#1032#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#1101#1102#0" expanded="true" />
+            <element signature="e#1135#1136#0" expanded="true" />
+            <element signature="e#1162#1163#0" expanded="true" />
+            <element signature="e#1187#1188#0" expanded="true" />
+            <element signature="e#1221#1222#0" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+            <element signature="e#1281#1282#0" expanded="true" />
+            <element signature="e#1309#1310#0" expanded="true" />
+            <element signature="e#1351#1352#0" expanded="true" />
+            <element signature="e#1385#1386#0" expanded="true" />
+            <element signature="e#1420#1421#0" expanded="true" />
+            <element signature="e#1451#1452#0" expanded="true" />
+            <element signature="e#1499#1500#0" expanded="true" />
+            <element signature="e#1539#1540#0" expanded="true" />
+            <element signature="e#1568#1569#0" expanded="true" />
+            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="e#1633#1634#0" expanded="true" />
+            <element signature="e#1665#1666#0" expanded="true" />
+            <element signature="e#1694#1695#0" expanded="true" />
+            <element signature="e#1721#1722#0" expanded="true" />
+            <element signature="e#1759#1760#0" expanded="true" />
+            <element signature="e#1791#1792#0" expanded="true" />
+            <element signature="e#1820#1821#0" expanded="true" />
+            <element signature="e#1847#1848#0" expanded="true" />
+            <element signature="e#1885#1886#0" expanded="true" />
+            <element signature="e#1917#1918#0" expanded="true" />
+            <element signature="e#1953#1954#0" expanded="true" />
+            <element signature="e#1984#1985#0" expanded="true" />
+            <element signature="e#2033#2034#0" expanded="true" />
+            <element signature="e#2073#2074#0" expanded="true" />
+            <element signature="e#2106#2107#0" expanded="true" />
+            <element signature="e#2134#2135#0" expanded="true" />
+            <element signature="e#2177#2178#0" expanded="true" />
+            <element signature="e#2211#2212#0" expanded="true" />
+            <element signature="e#2246#2247#0" expanded="true" />
+            <element signature="e#2279#2280#0" expanded="true" />
+            <element signature="e#2329#2330#0" expanded="true" />
+            <element signature="e#2373#2374#0" expanded="true" />
+            <element signature="e#2412#2413#0" expanded="true" />
+            <element signature="e#2449#2450#0" expanded="true" />
+            <element signature="e#2507#2508#0" expanded="true" />
+            <element signature="e#2559#2560#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/SpuMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="49" lean-forward="false" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/BrandController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="50" lean-forward="true" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/CategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/mapper/CategoryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="85" lean-forward="false" selection-start-line="6" selection-start-column="85" selection-end-line="6" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/CategoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/BrandService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="24" column="31" lean-forward="false" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyinterface/src/main/java/com/wade/po/BrandPO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
+          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+          <folding>
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#555#556#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/service/GoodsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-259">
+          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/ItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itemflyserver/itemflyservice/src/main/java/com/wade/controller/GoodsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

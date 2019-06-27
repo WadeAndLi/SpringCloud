@@ -8,6 +8,7 @@ public enum ExceptionEnum {
     UPLOAD_ERROR(500, "文件上传失败"),
     FILE_TYPE_ERROR(400, "文件类型不匹配"),
     SPECIFICATION_NOT_FOUND(404, "商品规格不存在"),
+    GOODS_NOT_FOUND(404, "商品不存在"),
     ;
     private int statusCode;
     private String message;
