@@ -11,6 +11,7 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.ObjectUtils;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
@@ -42,5 +43,13 @@ public class  BrandService {
         }
         PageInfo<BrandPO> result = new PageInfo<>(resultList);
         return new PageResult<>((int) result.getTotal(), resultList);
+    }
+
+    BrandPO getBrand(Long id) {
+        BrandPO result = brandMapper.selectByPrimaryKey(id);
+        if (ObjectUtils.isEmpty(result)) {
+            throw new FlyException(ExceptionEnum.BRAND_NOT_FOUND);
+        }
+        return result;
     }
 }

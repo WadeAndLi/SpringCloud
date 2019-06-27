@@ -202,12 +202,23 @@
       },
       getDataFromApi() {
         this.loading = true;
-        setTimeout(() => {
-          // 返回假数据
-          this.items = goodsData.slice(0, 4);
-          this.totalItems = 25;
-          this.loading = false;
-        }, 300)
+        let params = {
+          page: this.pagination.page,
+          rows: this.pagination.rowsPerPage,
+          saleable: !this.search.saleable
+        }
+        !!this.search.key && (params.key = this.search.key)
+        this.$http.get("/item/spu/page", {params: params}).then(resp => {
+            this.items = resp.data.items;
+            this.totalItems = resp.data.total;
+            this.loading = false;
+        })
+        // setTimeout(() => {
+        //   // 返回假数据
+        //   this.items = goodsData.slice(0, 4);
+        //   this.totalItems = 25;
+        //   this.loading = false;
+        // }, 300)
       }
     }
   }

@@ -11,7 +11,7 @@ public class BrandPO {
 
     @Id
     @KeySql(useGeneratedKeys = true)
-    private Integer id;
+    private Long id;
 
     @Column(name = "name")
     private String name;
@@ -22,11 +22,11 @@ public class BrandPO {
     @Column(name = "letter")
     private String letter;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
