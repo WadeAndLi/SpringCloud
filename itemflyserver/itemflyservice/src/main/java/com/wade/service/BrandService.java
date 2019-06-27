@@ -52,4 +52,12 @@ public class  BrandService {
         }
         return result;
     }
+
+    public List<BrandPO> queryBrandById(Long cid) {
+        List<BrandPO> resultList = brandMapper.getBrandById(cid);
+        if (CollectionUtils.isEmpty(resultList)) {
+            throw new FlyException(ExceptionEnum.BRAND_NOT_FOUND);
+        }
+        return resultList;
+    }
 }
