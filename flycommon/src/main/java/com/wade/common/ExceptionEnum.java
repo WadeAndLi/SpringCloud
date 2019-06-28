@@ -9,6 +9,7 @@ public enum ExceptionEnum {
     FILE_TYPE_ERROR(400, "文件类型不匹配"),
     SPECIFICATION_NOT_FOUND(404, "商品规格不存在"),
     GOODS_NOT_FOUND(404, "商品不存在"),
+    ERROR_TO_ADD_GOODS(500, "添加商品失败"),
     ;
     private int statusCode;
     private String message;

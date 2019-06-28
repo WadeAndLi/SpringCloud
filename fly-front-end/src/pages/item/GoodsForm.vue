@@ -43,7 +43,7 @@
       </v-stepper-content>
       <!--商品描述-->
       <v-stepper-content step="2">
-        <quill-editor v-model="goods.spuDetail.description" :options="editorOption"/>
+        <v-editor v-model="goods.spuDetail.description" :options="editorOption" upload-url="/upload/image"/>
       </v-stepper-content>
       <!--规格参数-->
       <v-stepper-content step="3">
@@ -143,7 +143,7 @@
                 <v-card flat class="pb-3">
                   <v-card-title>为商品上传图片：</v-card-title>
                   <v-card-text>
-                    <v-upload multiple url="/item/upload" v-model="props.item.images"/>
+                    <v-upload multiple url="/upload/image" v-model="props.item.images"/>
                   </v-card-text>
                 </v-card>
               </template>
@@ -284,12 +284,12 @@
             price : this.$format(price),
             ownSpec: JSON.stringify(skuSpecs),
             indexes,
-            stock: {stock}
+            stock: stock
           }
         })
         // 发起请求
         this.$http({
-          url: "/item/goods",
+          url: "/item/spu/goods",
           method: this.isEdit ? "put" : "post",
           data: this.goods
         })
@@ -324,9 +324,10 @@
               this.brandOptions = resp.data;
             })
           // 根据分类加载规格参数
-          this.$http.get("/item/spec/" + val[2].id)
+          this.$http.get("/item/spec/groups/" + val[2].id)
             .then(resp => {
-              this.specifications = resp.data;
+              let data = JSON.parse(resp.data.specifications);
+              this.specifications = data;
               this.template = [];
               this.skuTemplate = [];
               // 过滤出SKU属性
