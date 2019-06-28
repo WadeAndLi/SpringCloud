@@ -6,7 +6,8 @@ import tk.mybatis.mapper.annotation.KeySql;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
-import java.sql.Time;
+import java.time.LocalDate;
+import java.util.List;
 
 @Table(name = "tb_spu")
 public class SpuPO {
@@ -22,16 +23,23 @@ public class SpuPO {
     private Long brandId;
     private Boolean saleable;
     private Boolean valid;
-    private Time createTime;
+    private LocalDate createTime;
 
     @JsonIgnore
-    private Time lastUpdateTime;
+    private LocalDate lastUpdateTime;
 
     @Transient
     private String cname;
 
     @Transient
     private String bname;
+
+    @Transient
+    private List<SkuPO> skus;
+
+    @Transient
+    private SpuDetailPO spuDetail;
+
 
     public Long getBrandId() {
         return brandId;
@@ -121,19 +129,36 @@ public class SpuPO {
         this.valid = valid;
     }
 
-    public Time getCreateTime() {
+    public LocalDate getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Time createTime) {
+    public void setCreateTime(LocalDate createTime) {
         this.createTime = createTime;
     }
 
-    public Time getLastUpdateTime() {
+    public LocalDate getLastUpdateTime() {
         return lastUpdateTime;
     }
 
-    public void setLastUpdateTime(Time lastUpdateTime) {
+    public void setLastUpdateTime(LocalDate lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
+    }
+
+
+    public List<SkuPO> getSkus() {
+        return skus;
+    }
+
+    public void setSkus(List<SkuPO> skus) {
+        this.skus = skus;
+    }
+
+    public SpuDetailPO getSpuDetail() {
+        return spuDetail;
+    }
+
+    public void setSpuDetail(SpuDetailPO spuDetail) {
+        this.spuDetail = spuDetail;
     }
 }

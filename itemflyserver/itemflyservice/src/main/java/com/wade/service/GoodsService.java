@@ -5,19 +5,21 @@ import com.github.pagehelper.PageInfo;
 import com.wade.common.ExceptionEnum;
 import com.wade.common.FlyException;
 import com.wade.common.PageResult;
+import com.wade.mapper.SkuMapper;
 import com.wade.mapper.SpuDetailMapper;
 import com.wade.mapper.SpuMapper;
-import com.wade.po.Category;
-import com.wade.po.SpuPO;
+import com.wade.mapper.StockMapper;
+import com.wade.po.*;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 import tk.mybatis.mapper.entity.Example;
-
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Service
@@ -34,6 +36,12 @@ public class GoodsService {
 
     @Autowired
     private BrandService brandService;
+
+    @Autowired
+    private SkuMapper skuMapper;
+
+    @Autowired
+    private StockMapper stockMapper;
 
     public PageResult<SpuPO> getSpu(int page, String key, int rows, Boolean saleable) {
 
@@ -82,5 +90,42 @@ public class GoodsService {
 
             spuPO.setBname(brandService.getBrand(spuPO.getBrandId()).getName());
         }
+    }
+
+    @Transactional
+    public void insertGoods(SpuPO spuPO) {
+        // add spu
+        spuPO.setCreateTime(LocalDate.now());
+        spuPO.setId(null);
+        spuPO.setLastUpdateTime(LocalDate.now());
+        spuPO.setSaleable(true);
+        spuPO.setValid(false);
+        int count = spuMapper.insert(spuPO);
+        if (count != 1) {
+            throw new FlyException(ExceptionEnum.ERROR_TO_ADD_GOODS);
+        }
+
+        // add spu detail
+        SpuDetailPO spuDetailPO = spuPO.getSpuDetail();
+        spuDetailPO.setSpuId(spuPO.getId());
+        spuDetailMapper.insert(spuDetailPO);
+
+        List<StockPO> stockPOList = new ArrayList<>();
+        // add sku list
+        List<SkuPO> skuPOList = spuPO.getSkus();
+        for (SkuPO skuPO : skuPOList) {
+            skuPO.setSpuId(spuPO.getId());
+            skuPO.setCreateTime(LocalDate.now());
+            skuPO.setLastUpdateTime(LocalDate.now());
+            if(skuMapper.insert(skuPO) != 1) {
+                throw new FlyException(ExceptionEnum.ERROR_TO_ADD_GOODS);
+            }
+            StockPO stockPO = new StockPO();
+            stockPO.setSkuId(skuPO.getId());
+            stockPO.setStock(skuPO.getStock());
+            stockPOList.add(stockPO);
+        }
+
+        stockMapper.insertList(stockPOList);
     }
 }

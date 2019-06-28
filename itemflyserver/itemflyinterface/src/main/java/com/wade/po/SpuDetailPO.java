@@ -1,13 +1,15 @@
 package com.wade.po;
 
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Table(name = "tb_spu_detail")
 public class SpuDetailPO {
     @Id
     private Long spuId;
     private String description;
     private String specifications;
-    private String speTemplate;
+    private String specTemplate;
     private String packingList;
     private String afterService;
 
@@ -35,12 +37,12 @@ public class SpuDetailPO {
         this.specifications = specifications;
     }
 
-    public String getSpeTemplate() {
-        return speTemplate;
+    public String getSpecTemplate() {
+        return specTemplate;
     }
 
-    public void setSpeTemplate(String speTemplate) {
-        this.speTemplate = speTemplate;
+    public void setSpecTemplate(String specTemplate) {
+        this.specTemplate = specTemplate;
     }
 
     public String getPackingList() {
