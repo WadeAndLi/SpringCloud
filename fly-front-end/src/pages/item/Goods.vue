@@ -167,22 +167,25 @@
         this.show = true;
       },
       editItem(item) {
-        this.selectedGoods = item;
-        const names = item.cname.split("/");
-        this.selectedGoods.categories = [
-          {id: item.cid1, name: names[0]},
-          {id: item.cid2, name: names[1]},
-          {id: item.cid3, name: names[2]}
-        ];
         // 查询商品详情
-        this.$http.get("/item/goods/spu/detail/" + item.id)
+        this.$http.get("/item/spu/detail/" + item.id)
           .then(resp => {
-            this.selectedGoods.spuDetail = resp.data;
-            this.selectedGoods.spuDetail.specTemplate = JSON.parse(resp.data.specTemplate);
-            this.selectedGoods.spuDetail.specifications = JSON.parse(resp.data.specifications);
+            this.isEdit = true;
+            this.show = true;
+            let selectedGoods = item;
+            const names = item.cname.split("/");
+            selectedGoods.categories = [
+              {id: item.cid1, name: names[0]},
+              {id: item.cid2, name: names[1]},
+              {id: item.cid3, name: names[2]}
+            ];
+            // selectedGoods.specifications resp.data.
+            selectedGoods.spuDetail = resp.data.spuDetail;
+            selectedGoods.skus = resp.data.skus;
+            selectedGoods.spuDetail.specTemplate = JSON.parse(selectedGoods.spuDetail.specTemplate);
+            selectedGoods.spuDetail.specifications = JSON.parse(selectedGoods.spuDetail.specifications);
+            this.selectedGoods = selectedGoods;
           })
-        this.isEdit = true;
-        this.show = true;
       },
       deleteItem(id) {
         this.$message.confirm('此操作将永久删除该商品, 是否继续?')

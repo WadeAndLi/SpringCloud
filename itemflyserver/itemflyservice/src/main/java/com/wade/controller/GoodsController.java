@@ -1,6 +1,8 @@
 package com.wade.controller;
 
 import com.wade.common.PageResult;
+import com.wade.dto.SpuDTO;
+import com.wade.po.SpuDetailPO;
 import com.wade.po.SpuPO;
 import com.wade.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,5 +32,10 @@ public class GoodsController {
     public ResponseEntity<Void> saveGoods(@RequestBody SpuPO spuPO) {
         goodsService.insertGoods(spuPO);
         return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+
+    @GetMapping("/detail/{spuId}")
+    public ResponseEntity<SpuDTO> getSpuDetailById(@PathVariable("spuId")Long spuId) {
+        return ResponseEntity.ok(goodsService.getSpuById(spuId));
     }
 }
