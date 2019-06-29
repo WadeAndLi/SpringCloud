@@ -186,7 +186,10 @@
         type: Boolean,
         default: false
       },
-      oldGoods: Object
+      oldGoods: {
+        type: Object,
+        default: null
+      }
     },
     data() {
       return {
@@ -304,6 +307,14 @@
           })
       }
     },
+    mounted() {
+      if (!!this.oldGoods && this.isEdit) {
+        let goodsData = this.oldGoods;
+        this.goods = goodsData;
+        this.skusData = goodsData.skus;
+        this.specifications = goodsData.spuDetail.specifications;
+      }
+    },
     watch: {
       oldGoods: {
         deep: true,
@@ -382,23 +393,15 @@
           });
           // 处理回显
           if (this.isEdit) {
-            // 查询sku
-            this.$http.get("/item/goods/sku/list", {
-              params: {
-                id: this.goods.id
-              }
-            }).then(resp => {
-              // 处理SKU
-              this.skus.forEach(sku => {
-                resp.data.forEach(s => {
-                  if (sku.indexes === s.indexes) {
-                    sku.id = s.id;
-                    sku.price = this.$format(s.price);
-                    sku.stock = s.stock.stock;
-                    sku.images = s.images.split(",");
-                    sku.enable = s.enable;
-                  }
-                })
+            this.skus.forEach(sku => {
+              this.skusData.forEach(s => {
+                if (sku.indexes === s.indexes) {
+                  sku.id = s.id;
+                  sku.price = this.$format(s.price);
+                  sku.stock = s.stock;
+                  sku.images = s.images.split(",");
+                  sku.enable = s.enable;
+                }
               })
             })
           }
@@ -411,7 +414,7 @@
           if (this.skus.length > 0) {
             Object.keys(this.skus[0]).forEach(text => {
               let width = "80";
-              if (text == "indexes") {
+              if (text == "indexes" || text == "id" || text == "images") {
                 return
               }
               if (text == "price") {
@@ -440,5 +443,4 @@
 </script>
 
 <style scoped>
-
 </style>

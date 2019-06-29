@@ -5,6 +5,7 @@ import com.github.pagehelper.PageInfo;
 import com.wade.common.ExceptionEnum;
 import com.wade.common.FlyException;
 import com.wade.common.PageResult;
+import com.wade.dto.SpuDTO;
 import com.wade.mapper.SkuMapper;
 import com.wade.mapper.SpuDetailMapper;
 import com.wade.mapper.SpuMapper;
@@ -15,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.ObjectUtils;
 import tk.mybatis.mapper.entity.Example;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -127,5 +129,23 @@ public class GoodsService {
         }
 
         stockMapper.insertList(stockPOList);
+    }
+
+    public SpuDTO getSpuById(Long spuId) {
+        SpuDTO spuDTO = new SpuDTO();
+        SpuPO spuPO = spuMapper.selectByPrimaryKey(spuId);
+        if (ObjectUtils.isEmpty(spuPO)) {
+            throw new FlyException(ExceptionEnum.GOODS_NOT_FOUND);
+        }
+        spuDTO.setSpu(spuPO);
+        spuDTO.setSpuDetail(spuDetailMapper.selectByPrimaryKey(spuId));
+        SkuPO skuPO = new SkuPO();
+        skuPO.setSpuId(spuId);
+        List<SkuPO> skuList = skuMapper.select(skuPO);
+        for(SkuPO item : skuList) {
+            item.setStock(stockMapper.selectByPrimaryKey(item.getId()).getStock());
+        }
+        spuDTO.setSkus(skuList);
+        return spuDTO;
     }
 }
