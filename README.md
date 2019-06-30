@@ -44,7 +44,7 @@ CDN服务， 将静态资源放到CDN服务器上，以前响应静态资源的�
    1. 每个索引可以进行分片(shard) (将整个数据分到不同的片区中) 每个片区中还有备份 (replica)
   ES 关键字类型：
 
-   string （text)
+   string （text) (keyword)  text可以分词, keyWord不可以分词
     字符串类型，es中最常用的类型，官方文档 
 
     比较重要的参数：
