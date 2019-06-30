@@ -16,6 +16,7 @@
         <module>itemflyserver</module>
         <module>flycommon</module>
         <module>flyupload</module>
+        <module>flysearch</module>
     </modules>
 
     <parent>
