@@ -1,0 +1,13 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: search-service
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: 172.19.168.25:9300
+eureka:
+  client:
+    service-url:
+      defaultZone: http://0.0.0.0:10086/eureka

@@ -60,4 +60,12 @@ public class  BrandService {
         }
         return resultList;
     }
+
+    public BrandPO queryOneBrand(Long id) {
+        BrandPO brand = brandMapper.selectByPrimaryKey(id);
+        if (null == brand) {
+            throw new FlyException(ExceptionEnum.BRAND_NOT_FOUND);
+        }
+        return brand;
+    }
 }

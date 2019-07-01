@@ -32,4 +32,12 @@ public class CategoryService {
         }
         return resultList;
     }
+
+    public List<Category> getCategoryListByIds(List<Long> ids) {
+        List<Category> resultList = categoryMapper.selectByIdList(ids);
+        if (CollectionUtils.isEmpty(resultList)) {
+            throw new FlyException(ExceptionEnum.CATEGORY_NOT_FOUND);
+        }
+        return resultList;
+    }
 }

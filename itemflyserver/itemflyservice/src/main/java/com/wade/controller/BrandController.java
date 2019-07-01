@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -30,5 +31,10 @@ public class BrandController {
     @GetMapping("cid/{cid}")
     public ResponseEntity<List<BrandPO>> getBrandById(@PathVariable("cid")Long cid) {
             return ResponseEntity.ok(brandService.queryBrandById(cid));
+    }
+
+    @GetMapping("{id}")
+    public ResponseEntity<BrandPO> getBrand(@PathVariable("id")Long id) {
+            return ResponseEntity.ok(brandService.queryOneBrand(id));
     }
 }
