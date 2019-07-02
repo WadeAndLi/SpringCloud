@@ -6,6 +6,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 public interface SpecificationAPI {
 
-    @GetMapping("groups/{cid}")
+    @GetMapping("/spec/groups/{cid}")
     SpecificationPO getSpecification(@PathVariable("cid") Long cid);
 }

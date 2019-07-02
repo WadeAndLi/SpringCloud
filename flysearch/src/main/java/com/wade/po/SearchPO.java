@@ -29,7 +29,7 @@ public class SearchPO {
 
     @Field(type = FieldType.Keyword, index = false)
     private String sku; //一个spu下有多个sku, sku的集合
-    private Map<String, Object> specs;
+    private String specs;
 
     public Long getId() {
         return id;
@@ -111,11 +111,11 @@ public class SearchPO {
         this.sku = sku;
     }
 
-    public Map<String, Object> getSpecs() {
+    public String getSpecs() {
         return specs;
     }
 
-    public void setSpecs(Map<String, Object> specs) {
+    public void setSpecs(String specs) {
         this.specs = specs;
     }
 }

@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 public interface GoodsAPI {
 
-    @GetMapping("/detail/{spuId}")
+    @GetMapping("/spu/detail/{spuId}")
     SpuDTO getSpuDetailById(@PathVariable("spuId")Long spuId);
 
-    @GetMapping("/page")
+    @GetMapping("/spu/page")
     PageResult<SpuPO> getSpu(
             @RequestParam(value = "page", defaultValue = "1")int page,
             @RequestParam(value = "key", defaultValue = "")String key,
