@@ -16,7 +16,8 @@ hystrix 的超时时常要是 ribborn 连接和读取超时时长的两倍多
 Spring-cloud-config: 全局的配置中心，可以实现开发环境和生产环境的切换，可以和GIT 一起来使用
 
 config server会先去拉取 git上的配置信息，然后每个微服务会去拉取config-server的信息
-主动进行推送 Spring-cloud-bus 实现消息推送， 内部使用rabbitMQ，Kafka来进行实现的, 首先先去拉取git上的配置，然后通过spring cloud bus 去向每个server发送通知， 让服务器自动拉取配置, 不需要重启，可以自动生效。(需要配置) Spring-cloud-config 和 Spring-cloud-bus 是一套，用于配置动态更新
+主动进行推送 Spring-cloud-bus 实现消息推送， 内部使用rabbitMQ，Kafka来进行实现的, 首先先去拉取git上的配置，然后通过spring cloud bus 去向每个server发送通知， 让服务器自动拉取配置, 不需要重启，可以自动生效。(需要配置) Spring-cloud-config 和 Spring-cloud-bus 是一套，用于配置动态更新.
+
 Spring-cloud-hystrix-dashboard: 容错统计，形成一个图形化界面 Spring-cloud-sleuth: 链路追踪, 结合Zipkin
 
 CDN服务， 将静态资源放到CDN服务器上，以前响应静态资源的时候，需要经过中间商然后进行转发，现在可以直接通过CDN获取我们的静态资源。
@@ -30,3 +31,5 @@ CDN服务， 将静态资源放到CDN服务器上，以前响应静态资源的�
 
 四. 搭建Elacsticsearch微服务.
   1. 配置Eureka, 引入Feign的依赖 (配置要@EnableFeignClients)
+
+五.引入Feign, feidn是一个实现客户端和服务端接口通信的技术,可以很好的规范REST风格的API编程规范，由于我们可能其他的服务也会使用相同的接口，我们通常建议将接口放入一个interface中，这样有利于代码的复用，我们可以把一些公共的服务接口放入到里面，然后如果其他的服务使用的时候，可以在自己的服务中注册feignclient然后集成这个接口就好了，这样很好的维持了代码的复用。
