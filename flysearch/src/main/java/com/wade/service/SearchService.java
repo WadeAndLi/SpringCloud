@@ -7,10 +7,18 @@ import com.wade.client.SpecificationClient;
 import com.wade.common.ExceptionEnum;
 import com.wade.common.FlyException;
 import com.wade.common.JsonUtils;
+import com.wade.common.PageResult;
 import com.wade.dto.SpuDTO;
 import com.wade.po.*;
+import com.wade.repository.GoodsRepository;
 import org.apache.commons.lang.StringUtils;
+import org.elasticsearch.index.query.QueryBuilder;
+import org.elasticsearch.index.query.QueryBuilders;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.elasticsearch.core.query.FetchSourceFilter;
+import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
@@ -32,6 +40,9 @@ public class SearchService {
 
     @Autowired
     GoodsClient goodsClient;
+
+    @Autowired
+    GoodsRepository goodsRepository;
 
     @Transactional
     public SearchPO buildGoods(SpuPO spuPO) {
@@ -77,5 +88,21 @@ public class SearchService {
         result.setSpecs(null == spuDetailPO ? null : spuDetailPO.getSpecifications());
         result.setPrice(prices);
         return result;
+    }
+
+    public PageResult<SearchPO> getSearchResult(SearchRequest searchRequest) {
+        int page = searchRequest.getPage().intValue() - 1;
+        int size = searchRequest.getSize().intValue();
+        String key = searchRequest.getKey();
+        NativeSearchQueryBuilder searchQueryBuilder = new NativeSearchQueryBuilder();
+        searchQueryBuilder.withSourceFilter(new FetchSourceFilter(new String[]{"id", "subTitle", "sku"}, null));
+        searchQueryBuilder.withPageable(PageRequest.of(page, size));
+        searchQueryBuilder.withQuery(QueryBuilders.matchQuery("all", key));
+        Page<SearchPO> result = goodsRepository.search(searchQueryBuilder.build());
+
+        long total = result.getTotalElements();
+        long totalPage = result.getTotalPages();
+        List<SearchPO> searchResult = result.getContent();
+        return new PageResult<>((int)total, (int)totalPage, searchResult);
     }
 }

@@ -14,6 +14,7 @@ public class GlobalCorsConfig {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
 
         corsConfiguration.addAllowedOrigin("http://manage.fly.com");
+        corsConfiguration.addAllowedOrigin("http://www.fly.com");
         corsConfiguration.setAllowCredentials(true);
         corsConfiguration.addAllowedMethod("OPTIONS");
         corsConfiguration.addAllowedMethod("GET");
