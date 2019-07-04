@@ -17,6 +17,8 @@
         <module>flycommon</module>
         <module>flyupload</module>
         <module>flysearch</module>
+        <module>flypage</module>
+        <module>flygoods</module>
     </modules>
 
     <parent>

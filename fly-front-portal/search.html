@@ -317,7 +317,7 @@
                     <li class="yui3-u-1-5" v-for="item in goodsList" :ket="item.id">
                         <div class="list-wrap">
                             <div class="p-img">
-                                <a href="item.html" target="_blank"><img :src="item.selectedSku.image" height="200"/></a>
+                                <a :href="'/goods/' + item.id + '.html'" target="_blank"><img :src="item.selectedSku.image" height="200"/></a>
                                 <ul class="skus">
                                     <li :class="{'selected' : skuItem.id === item.selectedSku.id}" 
                                         v-for="skuItem in item.sku" @click="changeItem(item, skuItem)">

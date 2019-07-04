@@ -1,0 +1,12 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: goods-service
+  thymeleaf:
+    cache: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://0.0.0.0:10086/eureka
+

@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/flyitem/flyiteminterface/pom.xml" />
         <option value="$PROJECT_DIR$/flyitem/pom.xml" />
         <option value="$PROJECT_DIR$/flyitemservice/pom.xml" />
+        <option value="$PROJECT_DIR$/flypage/pom.xml" />
       </set>
     </option>
   </component>

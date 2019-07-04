@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/flycommon/flycommon.iml" filepath="$PROJECT_DIR$/flycommon/flycommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flygoods/flygoods.iml" filepath="$PROJECT_DIR$/flygoods/flygoods.iml" />
       <module fileurl="file://$PROJECT_DIR$/flyproject.iml" filepath="$PROJECT_DIR$/flyproject.iml" />
       <module fileurl="file://$PROJECT_DIR$/flyregistry/flyregistry.iml" filepath="$PROJECT_DIR$/flyregistry/flyregistry.iml" />
       <module fileurl="file://$PROJECT_DIR$/flysearch/flysearch.iml" filepath="$PROJECT_DIR$/flysearch/flysearch.iml" />
