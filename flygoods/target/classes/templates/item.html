@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<meta charset="utf-8" />
@@ -100,19 +100,13 @@
 		<div id="item">
 			<div class="crumb-wrap">
 				<ul class="sui-breadcrumb">
-					<li>
-						<a href="#">手机</a>
+					<li th:each="category:${categories}">
+						<a href="#" th:text="${category.name}"></a>
 					</li>
 					<li>
-						<a href="#">手机通讯</a>
+						<a href="#" th:text="${brand.name}"></a>
 					</li>
-					<li>
-						<a href="#">手机</a>
-					</li>
-					<li>
-						<a href="#">Apple</a>
-					</li>
-					<li class="active">Apple iPhone 6s</li>
+					<li class="active" th:text="${spu.title}"></li>
 				</ul>
 			</div>
 			<!--product-info-->
@@ -659,6 +653,8 @@
 									<i class="command">已有700人评价</i>
 								</div>
 							</div>
+							<input type="hidden" id="specificationsValue" th:value="${detail.specifications}"/>
+							<input type="hidden" id="specTemplateValue" th:value="${detail.specTemplate}"/>
 						</li>
 					</ul>
 				</div>
@@ -670,33 +666,28 @@
 <script src="/js/vue/vue.js"></script>
 <script src="/js/axios.min.js"></script>
 <script src="/js/common.js"></script>
-
-<script>
+<script type="text/javascript" src="/js/plugins/jquery/jquery.min.js"></script>
+<script th-inline="javascript">
+    const spu = /*[[${spu}]]*/{};
+    const skus = /*[[${skus}]]*/[];
+    const brand = /*[[${brand}]]*/{};
+    const categories = /*[[${categories}]]*/[];
     var itemVm = new Vue({
         el:"#itemApp",
-        data:{
-        },
+		data: {
+            specifications: "",
+            specTemplate: ""
+		},
+		created: function() {
+            this.specifications = JSON.parse($("#specificationsValue").val());
+            this.specTemplate = JSON.parse($("#specTemplateValue").val());
+		},
         components:{
             lyTop: () => import('/js/pages/top.js')
         }
     });
 </script>
-
-<script type="text/javascript" src="/js/plugins/jquery/jquery.min.js"></script>
 <script type="text/javascript">
-$(function(){
-	$("#service").hover(function(){
-		$(".service").show();
-	},function(){
-		$(".service").hide();
-	});
-	$("#shopcar").hover(function(){
-		$("#shopcarlist").show();
-	},function(){
-		$("#shopcarlist").hide();
-	});
-
-})
 </script>
 <script type="text/javascript" src="/js/model/cartModel.js"></script>
 <script type="text/javascript" src="/js/plugins/jquery.easing/jquery.easing.min.js"></script>

@@ -12,7 +12,6 @@ import com.wade.dto.SpuDTO;
 import com.wade.po.*;
 import com.wade.repository.GoodsRepository;
 import org.apache.commons.lang.StringUtils;
-import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
