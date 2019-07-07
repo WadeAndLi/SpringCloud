@@ -8,7 +8,10 @@ import com.wade.dto.SpuDTO;
 import com.wade.po.SpuPO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.context.Context;
 
+import java.io.*;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
@@ -26,6 +29,9 @@ public class PageService {
     @Autowired
     private CategoryClient categoryClient;
 
+    @Autowired
+    private TemplateEngine templateEngine;
+
     public ConcurrentMap<String, Object> queryPageDetail(Long id) {
         ConcurrentMap<String, Object> results = new ConcurrentHashMap<>();
         SpuDTO spuDetail = goodsClient.getSpuDetailById(id);
@@ -38,5 +44,17 @@ public class PageService {
         results.put("brand", brandClient.getBrand(spu.getBrandId()));
         results.put("categories", categoryClient.getCategoryList(ids));
         return results;
+    }
+
+    public void createHtml(Long id) {
+        //生成html
+        File file = new File("D:/flyproject", id + ".html");
+        try(PrintWriter writer = new PrintWriter(file, "UTF-8")){
+            Context context = new Context();
+            context.setVariables(queryPageDetail(id));
+            templateEngine.process("item", context, writer);
+        } catch (Exception e) {
+            System.out.println("生成静态页异常");
+        }
     }
 }
