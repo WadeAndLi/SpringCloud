@@ -1,0 +1,16 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: sms-service
+  rabbitmq:
+    host: 172.19.168.25
+    username: admin
+    password: admin
+    virtual-host: /wade
+fly:
+  sms:
+    accessKeyId: JWffwFJIwada
+    accessKeySecret: aySRliswq8fe7rF9gQyy1Izz4MQ
+    signName: wade
+    verifyCodeTemplate: SMS_13348948

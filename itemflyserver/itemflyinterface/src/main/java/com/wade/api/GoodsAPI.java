@@ -19,4 +19,7 @@ public interface GoodsAPI {
             @RequestParam(value = "rows", defaultValue = "5")int rows,
             @RequestParam(value = "saleable", defaultValue = "true")Boolean saleable
     );
+
+    @GetMapping("/spu/{id}")
+    SpuPO getOneSpu(@PathVariable("id") Long id);
 }

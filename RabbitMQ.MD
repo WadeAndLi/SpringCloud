@@ -69,4 +69,18 @@ ACK：消费者确认机制 Durable: 交换机保证不会消息丢失
 channel.confirmSelect() 开始confirm模式
 channel.waitForConfirmOrDie() 确认等待成功或失败
 
+消息重试有可能会导致消息的重复.
+我们要保证处理消息的一方的幂等性. (同一接口 重复执行 结果一致)
+
+Spring集成rabbitMQ 1.引入AMQP
+                   2.配置一个listener @RabbitListener(bindings = @QueueBinding(
+                                              value = @Queue(value = "spring.test.queue", durable = "true"),
+                                              exchange = @Exchange(
+                                                      value = "spring.test.exchange",
+                                                      ignoreDeclarationExceptions = "true",
+                                                      type = ExchangeTypes.TOPIC
+                                              ),
+                                              key = {"#.#"}))
+                   其中 exchange是交换机名称, queue是绑定的queue名称 最后定义了接收类型是topic和接收参数
+                   
    

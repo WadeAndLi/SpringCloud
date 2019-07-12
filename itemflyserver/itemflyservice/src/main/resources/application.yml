@@ -7,6 +7,19 @@ spring:
     password: 123456
   main:
     allow-bean-definition-overriding: true
+  rabbitmq:
+    host: 172.19.168.25
+    username: admin
+    password: admin
+    virtual-host: /wade
+    template:
+      retry:
+        enabled: true
+        initial-interval: 10000ms
+        max-interval: 30000ms
+        multiplier: 2
+      exchange: fly.item.exchange
+    publisher-confirms: true
 #mybatis:
 #  type-aliases-package: com.wade.po
 server:

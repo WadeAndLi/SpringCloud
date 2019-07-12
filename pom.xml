@@ -19,6 +19,8 @@
         <module>flysearch</module>
         <module>flypage</module>
         <module>flygoods</module>
+        <module>flyredis</module>
+        <module>flymessage</module>
     </modules>
 
     <parent>

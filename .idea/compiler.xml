@@ -9,6 +9,8 @@
         <module name="flycommon" />
         <module name="flygoods" />
         <module name="flyiteminterface" />
+        <module name="flymessage" />
+        <module name="flyredis" />
         <module name="flyregistry" />
         <module name="flysearch" />
         <module name="flyupload" />
@@ -25,8 +27,10 @@
       <module name="flyitem" target="1.8" />
       <module name="flyiteminterface" target="1.8" />
       <module name="flyitemservice" target="1.8" />
+      <module name="flymessage" target="1.8" />
       <module name="flypage" target="1.8" />
       <module name="flyproject" target="1.8" />
+      <module name="flyredis" target="1.8" />
       <module name="flyregistry" target="1.8" />
       <module name="flysearch" target="1.8" />
       <module name="flyupload" target="1.8" />

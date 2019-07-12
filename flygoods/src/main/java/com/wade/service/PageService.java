@@ -49,6 +49,9 @@ public class PageService {
     public void createHtml(Long id) {
         //生成html
         File file = new File("D:/flyproject", id + ".html");
+        if (file.exists()) {
+            file.delete();
+        }
         try(PrintWriter writer = new PrintWriter(file, "UTF-8")){
             Context context = new Context();
             context.setVariables(queryPageDetail(id));

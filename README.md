@@ -7,11 +7,11 @@ SpringCloud
 
 4.feign 实现服务器端的端口隐藏和方法的注解，使用注解和接口的形式。 其中feign 已经集成了ribbon 所以不需要再引入.
 
-5.Rull 实现微服务的网关作用，主要用来拦截请求，转发请求，实现负载均衡等作用, 路由制主要是使用Filter实现 Zull Filter中主要内置了4个类，用来进行请求拦截: filterType: 过滤类型： pre, routing, post, error filterOrder: 过滤顺序 shouldFilter: 要不要进行过滤 run: 过滤器逻辑
+5.Zull 实现微服务的网关作用，主要用来拦截请求，转发请求，实现负载均衡等作用, 路由制主要是使用Filter实现 Zull Filter中主要内置了4个类，用来进行请求拦截: filterType: 过滤类型： pre, routing, post, error filterOrder: 过滤顺序 shouldFilter: 要不要进行过滤 run: 过滤器逻辑
 
 hystrix 的超时时常要是 ribborn 连接和读取超时时长的两倍多
 
-当然 我们也不能只用一台Zuul服务器，当我们的系统需要做集群的时候，就需要在zoo的外层再加上一次负载均衡 nginx, nginx可以利用ip漂移
+当然 我们也不能只用一台Zuul服务器，当我们的系统需要做集群的时候，就需要在zull的外层再加上一次负载均衡 nginx, nginx可以利用ip漂移
 
 Spring-cloud-config: 全局的配置中心，可以实现开发环境和生产环境的切换，可以和GIT 一起来使用
 

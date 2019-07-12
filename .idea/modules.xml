@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/flycommon/flycommon.iml" filepath="$PROJECT_DIR$/flycommon/flycommon.iml" />
       <module fileurl="file://$PROJECT_DIR$/flygoods/flygoods.iml" filepath="$PROJECT_DIR$/flygoods/flygoods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flymessage/flymessage.iml" filepath="$PROJECT_DIR$/flymessage/flymessage.iml" />
       <module fileurl="file://$PROJECT_DIR$/flyproject.iml" filepath="$PROJECT_DIR$/flyproject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flyredis/flyredis.iml" filepath="$PROJECT_DIR$/flyredis/flyredis.iml" />
       <module fileurl="file://$PROJECT_DIR$/flyregistry/flyregistry.iml" filepath="$PROJECT_DIR$/flyregistry/flyregistry.iml" />
       <module fileurl="file://$PROJECT_DIR$/flysearch/flysearch.iml" filepath="$PROJECT_DIR$/flysearch/flysearch.iml" />
       <module fileurl="file://$PROJECT_DIR$/flyupload/flyupload.iml" filepath="$PROJECT_DIR$/flyupload/flyupload.iml" />

@@ -104,4 +104,10 @@ public class SearchService {
         List<SearchPO> searchResult = result.getContent();
         return new PageResult<>((int)total, (int)totalPage, searchResult);
     }
+
+    public void reIndexGoods(Long spuId) {
+        SpuPO spu = goodsClient.getOneSpu(spuId);
+        SearchPO searchPO = buildGoods(spu);
+        goodsRepository.save(searchPO);
+    }
 }

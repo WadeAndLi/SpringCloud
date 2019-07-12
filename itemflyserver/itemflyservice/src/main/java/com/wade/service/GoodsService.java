@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.wade.common.ExceptionEnum;
 import com.wade.common.FlyException;
+import com.wade.common.MQConstant;
 import com.wade.common.PageResult;
 import com.wade.dto.SpuDTO;
 import com.wade.mapper.SkuMapper;
@@ -12,6 +13,7 @@ import com.wade.mapper.SpuMapper;
 import com.wade.mapper.StockMapper;
 import com.wade.po.*;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -44,6 +46,9 @@ public class GoodsService {
 
     @Autowired
     private StockMapper stockMapper;
+
+    @Autowired
+    private AmqpTemplate amqpTemplate;
 
     public PageResult<SpuPO> getSpu(int page, String key, int rows, Boolean saleable) {
 
@@ -129,6 +134,9 @@ public class GoodsService {
         }
 
         stockMapper.insertList(stockPOList);
+
+        //发送MQ消息
+        amqpTemplate.convertAndSend(MQConstant.GOODS_INSERT, spuPO.getId());
     }
 
     public SpuDTO getSpuById(Long spuId) {
@@ -147,5 +155,13 @@ public class GoodsService {
         }
         spuDTO.setSkus(skuList);
         return spuDTO;
+    }
+
+    public SpuPO getOneSpu(Long id) {
+        SpuPO spu = spuMapper.selectByPrimaryKey(id);
+        if (spu == null) {
+            throw new FlyException(ExceptionEnum.GOODS_NOT_FOUND);
+        }
+        return spu;
     }
 }

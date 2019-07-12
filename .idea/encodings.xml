@@ -4,7 +4,8 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flycommon" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flygoods" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/flypage" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/flymessage" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/flyredis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flyregistry" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flysearch" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flyupload" charset="UTF-8" />
