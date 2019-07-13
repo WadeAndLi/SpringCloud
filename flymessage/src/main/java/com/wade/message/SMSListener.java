@@ -23,6 +23,9 @@ public class SMSListener {
 
     @Autowired
     private SMSConfig smsConfig;
+
+    @Autowired
+    private SMSUtils smsUtils;
     /**
      * 发送短信验证
      */
@@ -32,7 +35,6 @@ public class SMSListener {
             key = MQConstant.SMS_VERIFY_CODE
     ))
     public void sendMessage(Map<String, String> message) {
-        System.out.println("我收到啦");
         if (CollectionUtils.isEmpty(message)) {
             return;
         }
@@ -41,6 +43,6 @@ public class SMSListener {
             return;
         }
 
-        SMSUtils.sendSMS(phone, smsConfig.getSignName(), smsConfig.getVerifyCodeTemplate(), JsonUtils.serialize(message));
+        smsUtils.sendSMS(phone, smsConfig.getSignName(), smsConfig.getVerifyCodeTemplate(), JsonUtils.serialize(message));
     }
 }

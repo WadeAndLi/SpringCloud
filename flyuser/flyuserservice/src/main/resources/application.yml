@@ -1,0 +1,29 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/fly?serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  rabbitmq:
+    host: 172.19.168.25
+    virtual-host: /wade
+    username: admin
+    password: admin
+  redis:
+    host: 172.19.168.25
+eureka:
+  client:
+    service-url:
+      defaultZone: http://0.0.0.0:10086/eureka
+  instance:
+    ip-address: 0.0.0.0
+    prefer-ip-address: true
+mybatis:
+  type-aliases-package: com.wade.po
+fly:
+  jwt:
+    cookieName: FLY_COOKIE

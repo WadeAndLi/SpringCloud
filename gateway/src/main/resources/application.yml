@@ -19,7 +19,7 @@ zuul:
       path: /upload/**
       serviceId: upload-service
       strip-prefix: false
-
+    user-service: /user/**
 hystrix:
   command:
     default:

@@ -21,6 +21,7 @@
         <module>flygoods</module>
         <module>flyredis</module>
         <module>flymessage</module>
+        <module>flyuser</module>
     </modules>
 
     <parent>
