@@ -11,7 +11,8 @@ public enum ExceptionEnum {
     GOODS_NOT_FOUND(404, "商品不存在"),
     ERROR_TO_ADD_GOODS(500, "添加商品失败"),
     ERROR_CHECK_TYPE(400, "无效的检查类型"),
-    USER_LOGIN_ERROR(400, "用户账号密码错误")
+    USER_LOGIN_ERROR(400, "用户账号密码错误"),
+    CART_NOT_FOUND(404, "购物车为空"),
     ;
     private int statusCode;
     private String message;

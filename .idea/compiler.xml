@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="flycart" />
         <module name="flycommon" />
         <module name="flygoods" />
         <module name="flyiteminterface" />
@@ -23,6 +24,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="flycart" target="1.8" />
       <module name="flycommon" target="1.8" />
       <module name="flygateway" target="1.8" />
       <module name="flygoods" target="1.8" />

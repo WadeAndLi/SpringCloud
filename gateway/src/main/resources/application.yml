@@ -20,6 +20,7 @@ zuul:
       serviceId: upload-service
       strip-prefix: false
     user-service: /user/**
+    cart-service: /cart/**
 hystrix:
   command:
     default:
@@ -32,3 +33,11 @@ ribbon:
   ReadTimeout: 2000
   MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
+fly:
+  jwt:
+    cookieName: FLY_COOKIE
+  filter:
+    allow-paths:
+      - /api/user/login
+      - /api/item
+      - /api/search

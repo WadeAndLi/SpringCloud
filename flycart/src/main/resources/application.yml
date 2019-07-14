@@ -1,0 +1,14 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: cart-service
+  redis:
+    host: 172.19.168.25
+eureka:
+  client:
+    service-url:
+      defaultZone: http://0.0.0.0:10086/eureka
+fly:
+  jwt:
+    cookieName: FLY_COOKIE

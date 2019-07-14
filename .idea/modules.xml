@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/flycart/flycart.iml" filepath="$PROJECT_DIR$/flycart/flycart.iml" />
       <module fileurl="file://$PROJECT_DIR$/flycommon/flycommon.iml" filepath="$PROJECT_DIR$/flycommon/flycommon.iml" />
       <module fileurl="file://$PROJECT_DIR$/flygoods/flygoods.iml" filepath="$PROJECT_DIR$/flygoods/flygoods.iml" />
       <module fileurl="file://$PROJECT_DIR$/flymessage/flymessage.iml" filepath="$PROJECT_DIR$/flymessage/flymessage.iml" />
