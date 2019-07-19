@@ -17,6 +17,10 @@
         </v-card>
       </v-flex>
     </v-layout>
+    <button class="socket-button" @click="openSocket">点击打开Socket</button>
+    <div>{{ message }}</div>
+    <button class="socket-button" @click="sendMessage"></button>
+    <button class="socket-button" @click="closeSocket">点击关闭Socket</button>
   </v-container>
 </template>
 
@@ -25,12 +29,16 @@
   var echarts = require('echarts/lib/echarts');
   require('echarts/lib/chart/bar');
   require('echarts/lib/chart/pie');
+  import Stomp from 'stompjs'
+  import SockJS from "sockjs-client"
 
   export default {
     name: "dashboard",
     data(){
       return {
-
+        message: "正在连接Websocket...",
+        socket: {},
+        socketClient: null,
       }
     },
     mounted(){
@@ -95,10 +103,40 @@
           }
         })
       })
+    },
+    methods: {
+      openSocket: function() {
+        if (this.socketClient === null) {
+          this.message = "正在启动websocket...";
+          this.socket = new SockJS('http://localhost:8018/websocket');
+          this.socketClient = Stomp.over(this.socket);
+          this.socketClient.connect({}, function(frame) {
+            console.log('Connected: ' + frame);
+            this.socketClient.subscribe('/topic/message', function(response) {
+                this.message = response;
+            })
+          })
+        }
+      },
+      closeSocket: function() {
+        if (this.socketClient != null) {
+          this.socketClient.disconnect();
+          this.socketClient = null;
+          this.message = "Socket连接已经关闭";
+        }
+      },
+      sendMessage: function() {
+        this.socketClient.send("/sendTest", {}, "Good");
+      }
     }
   }
 </script>
 
 <style scoped>
-
+  .socket-button {
+    padding: 5px 18px;
+    background-color: aqua;
+    border-radius: 5px;
+    color: white;
+  }
 </style>

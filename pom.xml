@@ -23,6 +23,7 @@
         <module>flymessage</module>
         <module>flyuser</module>
         <module>flycart</module>
+        <module>flysocket</module>
     </modules>
 
     <parent>

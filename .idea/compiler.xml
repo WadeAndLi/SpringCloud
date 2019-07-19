@@ -14,6 +14,7 @@
         <module name="flyredis" />
         <module name="flyregistry" />
         <module name="flysearch" />
+        <module name="flysocket" />
         <module name="flyupload" />
         <module name="flyuserinterface" />
         <module name="flyuserservice" />
@@ -37,6 +38,7 @@
       <module name="flyredis" target="1.8" />
       <module name="flyregistry" target="1.8" />
       <module name="flysearch" target="1.8" />
+      <module name="flysocket" target="1.8" />
       <module name="flyupload" target="1.8" />
       <module name="flyuser" target="1.8" />
       <module name="flyuserinterface" target="1.8" />

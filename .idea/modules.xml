@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/flyredis/flyredis.iml" filepath="$PROJECT_DIR$/flyredis/flyredis.iml" />
       <module fileurl="file://$PROJECT_DIR$/flyregistry/flyregistry.iml" filepath="$PROJECT_DIR$/flyregistry/flyregistry.iml" />
       <module fileurl="file://$PROJECT_DIR$/flysearch/flysearch.iml" filepath="$PROJECT_DIR$/flysearch/flysearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flysocket/flysocket.iml" filepath="$PROJECT_DIR$/flysocket/flysocket.iml" />
       <module fileurl="file://$PROJECT_DIR$/flyupload/flyupload.iml" filepath="$PROJECT_DIR$/flyupload/flyupload.iml" />
       <module fileurl="file://$PROJECT_DIR$/flyuser/flyuser.iml" filepath="$PROJECT_DIR$/flyuser/flyuser.iml" />
       <module fileurl="file://$PROJECT_DIR$/flyuser/flyuserinterface/flyuserinterface.iml" filepath="$PROJECT_DIR$/flyuser/flyuserinterface/flyuserinterface.iml" />
